@@ -15,9 +15,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Tipo</th>
-                        <th scope="col">Nivel</th>
-                        <th scope="col">Amistad</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -26,21 +24,12 @@
                         <% arrayEntrenador.forEach(entrenador=> { %>
                             <tr>
                                 <th scope="row">
-                                    <%= entrenador.id %>
+                                    <%= usuario.id %>
                                 </th>
                                 <td>
-                                    <%= entrenador.nombre %>
-                                </td>
-                                <td>
-                                    <%= entrenador.tipo %>
-                                </td>
-                                <td>
-                                    <%= entrenador.nivel %>
+                                    <%= usuario.nombre %>
                                 </td>
                                 
-                                <td>
-                                    <%= entrenador.amistad %>
-                                </td>
     
                                 <td>
                                     <a class="btn btn-warning btn-sm" href="/entrenador/<%= entrenador.id %>">Editar/Eliminar</a>
