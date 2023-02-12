@@ -1,0 +1,54 @@
+<%- include("template/head.ejs", {tituloWeb:"Usuarios"})%>
+    </head>
+
+    <body>
+        <%- include("template/header.ejs", {tituloWeb:"Usuarios"})%>
+
+            <div class="container-fluid p-5">
+                <h1 class="display-1">Usuarios</h1>
+                <h1 class="display-6">
+                    <%=title%>
+                </h1>
+            </div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Nivel</th>
+                        <th scope="col">Amistad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (arrayEntrenador.length> 0) { %>
+                        <!--Haremos el foreach para recorrer el array-->
+                        <% arrayEntrenador.forEach(entrenador=> { %>
+                            <tr>
+                                <th scope="row">
+                                    <%= entrenador.id %>
+                                </th>
+                                <td>
+                                    <%= entrenador.nombre %>
+                                </td>
+                                <td>
+                                    <%= entrenador.tipo %>
+                                </td>
+                                <td>
+                                    <%= entrenador.nivel %>
+                                </td>
+                                
+                                <td>
+                                    <%= entrenador.amistad %>
+                                </td>
+    
+                                <td>
+                                    <a class="btn btn-warning btn-sm" href="/entrenador/<%= entrenador.id %>">Editar/Eliminar</a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                                <% } %>
+                </tbody>
+            </table>
+            <a class="btn btn-dark btn-block my-4" href="/">Volver</a>
+            <%- include("template/footer.ejs")%>

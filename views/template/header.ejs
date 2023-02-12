@@ -1,0 +1,26 @@
+<%var home="" ,usuarios="" ; switch(tituloWeb){ case "Inicio" : home="active" ; break; case "Usuarios" :
+    usuarios="active" ; break; } %>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">SAMU3AK CODES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link <%=home%>" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%=usuarios%>" href="/users">Usuarios</a>
+                    </li>
+                </ul>
+                <form class="d-flex gap-3">
+                    <a class="btn btn-outline-light" href="/login">Iniciar Sesión</a>
+                    <a class="btn btn-warning" href="/register">Registrarse</a>
+                </form>
+            </div>
+        </div>
+    </nav>
